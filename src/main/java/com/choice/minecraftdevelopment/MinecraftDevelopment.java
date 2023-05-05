@@ -6,6 +6,7 @@ import com.choice.minecraftdevelopment.config.SpawnConfig;
 import com.choice.minecraftdevelopment.manager.CommandManager;
 import com.choice.minecraftdevelopment.manager.EventManager;
 import com.choice.minecraftdevelopment.player.JoinAndQuitEventListener;
+import com.choice.minecraftdevelopment.player.PlayerRespawnEventListener;
 import com.choice.minecraftdevelopment.util.ConsoleLogger;
 
 public class MinecraftDevelopment extends BasePlugin {
@@ -29,5 +30,6 @@ public class MinecraftDevelopment extends BasePlugin {
     @Override
     public void initListeners(EventManager cm) {
         cm.registerEvents(new JoinAndQuitEventListener(new SpawnConfig(this), this));
+        cm.registerEvents(new PlayerRespawnEventListener(new SpawnConfig(this)));
     }
 }
