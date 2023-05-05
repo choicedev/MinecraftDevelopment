@@ -1,0 +1,9 @@
+name: MinecraftDevelopment
+version: '1.0-SNAPSHOT'
+main: com.choice.minecraftdevelopment.MinecraftDevelopment
+api-version: 1.19
+commands:
+  fly:
+    description: Toggle Flying using this command.
+    usage: /fly or /f
+    aliases: f

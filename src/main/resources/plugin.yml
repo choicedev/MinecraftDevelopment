@@ -1,0 +1,47 @@
+name: MinecraftDevelopment
+version: '${version}'
+main: com.choice.minecraftdevelopment.MinecraftDevelopment
+api-version: 1.19
+commands:
+  fly:
+    description: Toggle Flying using this command.
+    usage: Use /fly or /f ability or disabled fly
+    aliases:
+      - f
+      - fly
+  gamemode:
+    description: Change your mode of game.
+    usage: Use /gamemode <mode> <optional player>, 1 - CREATIVE. 2 - SURVIVAL. 3 - ADVENTURE
+    aliases:
+      - gm
+      - gamemode
+      - mode
+      - gmode
+      - gamem
+  setspawn:
+    description: Set the server spawn location.
+    usage: Use /setspawn for set spawn server.
+    aliases:
+      - setspawn
+      - newspawn
+      - set_spawn
+      - sspawn
+      - nspawn
+  spawn:
+    description: Go to Spawn.
+    usage: Use /spawn go to spawn server
+    aliases:
+      - spawn
+
+  login:
+    description: Login on the server.
+    usage: Use /login <password> do login on server.
+    aliases:
+      - login
+      - l
+  register:
+    description: Register user on server
+    usage: /register <password> <confirm password> for register on server and play.
+    aliases:
+      - register
+      - r
