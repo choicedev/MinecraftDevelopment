@@ -38,13 +38,13 @@ public class GameModeCommand extends ExecutableCommand {
             String name = args[1];
             Player target = PlayerUtils.getTargetPlayer(name);
 
-            if(!target.isOnline()){
+            if(target == null){
                 p.sendMessage(bold(ChatColor.RED) + name + " has Offline.");
                 return true;
             }
 
             changeGameMode(mode, target);
-            target.sendMessage(ChatColor.DARK_GREEN + "Your game mode has been changed by the "+p.getDisplayName());
+            target.sendMessage(ChatColor.DARK_GREEN + "Your game mode has been changed by the "+bold(ChatColor.DARK_BLUE) + p.getDisplayName());
             return true;
         }
 

@@ -43,7 +43,7 @@ public class RegisterCommand extends ExecutableCommand {
         String confirm_password = args[1];
 
         if (!password.equalsIgnoreCase(confirm_password)) {
-            p.sendMessage(errorMsg("Senha diferente."));
+            p.sendMessage(errorMsg("different password"));
             return true;
         }
 
@@ -57,7 +57,8 @@ public class RegisterCommand extends ExecutableCommand {
         );
 
         config.saveUser(user);
-        p.sendMessage(bold(ChatColor.GREEN) + "Usuário: " + ChatColor.AQUA + p.getDisplayName() + ChatColor.GREEN + "\n Registrado com sucesso!");
+        p.sendMessage(bold(ChatColor.GREEN) + "User: " + ChatColor.AQUA + p.getDisplayName() + ChatColor.GREEN + "\n Successfully registered!");
+        p.sendMessage(ChatColor.DARK_GREEN + "Use /login <password>");
         return true;
     }
 }

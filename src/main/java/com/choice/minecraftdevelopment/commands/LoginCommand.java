@@ -48,7 +48,7 @@ public class LoginCommand extends ExecutableCommand {
         }
 
 
-        p.sendMessage(bold(ChatColor.BLUE) + "Logado com sucesso!");
+        p.sendMessage(bold(ChatColor.BLUE) + "Logged in successfully.");
         config.setOnline(true);
         config.setLastLogin(DateTimeUtils.getCurrentDateTimeString());
 

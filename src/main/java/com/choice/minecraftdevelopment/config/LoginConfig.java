@@ -25,15 +25,13 @@ public class LoginConfig extends ConfigManager {
 
     public void setLastLogin(String lastLogin){
         ConfigurationSection loginSection = getFileConfig().getConfigurationSection(USER_KEY);
-        assert loginSection != null;
-        loginSection.set(LASTLOGIN_KEY, lastLogin);
+        if(loginSection != null) loginSection.set(LASTLOGIN_KEY, lastLogin);
         saveConfig();
     }
 
     public void setOnline(boolean isOnline){
         ConfigurationSection loginSection = getFileConfig().getConfigurationSection(USER_KEY);
-        assert loginSection != null;
-        loginSection.set(ONLINE_KEY, isOnline);
+        if(loginSection != null) loginSection.set(ONLINE_KEY, isOnline);
         saveConfig();
     }
 

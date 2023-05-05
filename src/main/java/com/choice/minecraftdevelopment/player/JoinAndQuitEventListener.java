@@ -73,7 +73,7 @@ public class JoinAndQuitEventListener implements Listener {
         Location location = spawnConfig.getSpawnLocation();
         if(PlayerUtils.blockedPlayersMove.contains(p)){
             e.setCancelled(true);
-            p.teleport(location);
+            if(location != null) p.teleport(location);
         }
     }
 }
